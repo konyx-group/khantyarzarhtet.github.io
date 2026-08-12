@@ -2,33 +2,33 @@ import { motion } from 'framer-motion'
 
 const talks = [
   {
-    title: 'The Power of Visual Narrative',
-    event: 'Creative Conference Berlin',
+    title: 'TypeScript at Scale: Lessons from the Trenches',
+    event: 'React Summit',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'Building Accessible Design Systems',
+    event: 'Design Systems Conference',
     year: '2023',
     link: '#',
   },
   {
-    title: 'Documentary Photography in the Age of AI',
-    event: 'TED Talk',
+    title: 'Real-Time Data Without the Headaches',
+    event: 'NodeConf EU',
     year: '2023',
     link: '#',
   },
   {
-    title: 'Finding Your Voice Through the Lens',
-    event: 'PhotoLondon Festival',
+    title: 'From Side Project to Open Source Product',
+    event: 'GitHub Universe',
     year: '2022',
     link: '#',
   },
   {
-    title: 'The Responsibility of the Witness',
-    event: 'World Press Photo Awards',
+    title: 'Performance Budgets for Modern Web Apps',
+    event: 'Web Performance Now',
     year: '2021',
-    link: '#',
-  },
-  {
-    title: 'Light, Shadow, and Human Connection',
-    event: 'Aperture Foundation',
-    year: '2020',
     link: '#',
   },
 ]

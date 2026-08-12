@@ -2,27 +2,27 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
-    title: 'Visual Storytelling in the Digital Age',
-    publication: 'Aperture Magazine',
+    title: 'Building Resilient React Components',
+    publication: 'Frontend Masters Blog',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'The Case for Type-Driven Development',
+    publication: 'TypeScript Weekly',
     year: '2023',
     link: '#',
   },
   {
-    title: 'The Ethics of Documentary Photography',
-    publication: 'Photography Journal',
+    title: 'Scaling Node.js Services Without Losing Sleep',
+    publication: 'Node.js Foundation',
     year: '2022',
     link: '#',
   },
   {
-    title: 'Finding Light in Darkness: A Personal Journey',
-    publication: 'The New York Times',
+    title: 'Why Accessibility Is a Performance Problem',
+    publication: 'Smashing Magazine',
     year: '2021',
-    link: '#',
-  },
-  {
-    title: 'Why Black & White Still Matters',
-    publication: 'British Journal of Photography',
-    year: '2020',
     link: '#',
   },
 ]

@@ -6,12 +6,12 @@ export function Hero() {
       {/* Background Image - Responsive */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/hero-image.jpg"
-          alt="Bruce Banner"
+          src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Developer workspace with code on screen"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
+        <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
       </div>
 
       {/* Content */}
@@ -26,7 +26,7 @@ export function Hero() {
             <h1 className="font-display leading-none tracking-tighter text-[15vw] sm:text-[12vw] md:text-hero">
               <span className="block text-white">BRUCE</span>
               <span className="block text-white">BANNER</span>
-              <span className="block text-white">PHOTOGRAPHY</span>
+              <span className="block text-white">DEVELOPER</span>
             </h1>
             
             <motion.p
@@ -35,7 +35,7 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mt-6 md:mt-8 text-sm sm:text-base text-white/80 max-w-sm md:max-w-md leading-relaxed"
             >
-              Bruce was named in Aperture Magazine's prestigious "Visual 100" list, as one of the Ten Most Compelling Photographers in 2023.
+              Full stack developer focused on building fast, accessible, and human-centered web applications. Currently shipping TypeScript, React, and Node.js products.
             </motion.p>
           </motion.div>
         </div>

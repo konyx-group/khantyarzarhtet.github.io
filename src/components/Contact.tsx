@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const contacts = [
-  { label: 'UNITED STATES', type: 'location', link: '#' },
-  { label: 'UNITED KINGDOM', type: 'location', link: '#' },
+  { label: 'OPEN SOURCE', type: 'location', link: 'https://github.com/brucebanner' },
+  { label: 'PROFESSIONAL', type: 'location', link: 'https://linkedin.com/in/brucebanner' },
 ]
 
 const fadeInUp = {
@@ -44,12 +44,12 @@ export function Contact() {
           className="mb-12 lg:mb-16 max-w-2xl"
         >
           <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-light leading-tight mb-4">
-            I'M NOTORIOUSLY<br />
-            SLOW AT GETTING<br />
-            BACK TO EMAILS
+            I'M CURRENTLY<br />
+            OPEN TO SELECT<br />
+            PROJECTS & ROLES
           </h3>
           <p className="text-sm text-gray-500 tracking-widest uppercase">
-            IN A HURRY? PLEASE CONTACT MY AWESOME PRODUCERS
+            IN A HURRY? PLEASE REACH OUT DIRECTLY
           </p>
         </motion.div>
 
@@ -59,6 +59,8 @@ export function Contact() {
             <motion.a
               key={contact.label}
               href={contact.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,26 +88,26 @@ export function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
             <a
-              href="mailto:bruce@banner.photography"
+              href="mailto:bruce@banner.dev"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              bruce@banner.photography
+              bruce@banner.dev
             </a>
             <a
-              href="https://instagram.com/brucebanner"
+              href="https://github.com/brucebanner"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              Instagram
+              GitHub
             </a>
             <a
-              href="https://vimeo.com/brucebanner"
+              href="https://linkedin.com/in/brucebanner"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              Vimeo
+              LinkedIn
             </a>
           </div>
         </motion.div>
@@ -116,10 +118,10 @@ export function Contact() {
           className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Bruce Banner Photography. All rights reserved.
+            © {new Date().getFullYear()} Bruce Banner. All rights reserved.
           </p>
           <p className="text-xs text-gray-600">
-            New York / London
+            San Francisco / Remote
           </p>
         </motion.footer>
       </div>
