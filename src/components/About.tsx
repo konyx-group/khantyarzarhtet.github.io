@@ -24,12 +24,12 @@ export function About() {
             className="order-2 lg:order-1"
           >
             <img
-              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Early work - Street photography"
+              src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Developer at a laptop in a modern workspace"
               className="w-full h-auto grayscale"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+              MIT - CAMBRIDGE / USA
             </p>
           </motion.div>
 
@@ -39,10 +39,11 @@ export function About() {
             className="order-1 lg:order-2 flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              It may not be obvious, but Bruce studied computer science at MIT, 
-              with a minor in visual arts. Preferring lenses to algorithms, 
-              he quickly abandoned a promising tech career to study Photography 
-              and Visual Storytelling at Parsons School of Design in New York.
+              Bruce started in computer science at MIT, where he fell in love with the
+              craft of turning ideas into software. After years of building across
+              startups and established product teams, he now specializes in full stack
+              web development with a focus on performance, accessibility, and clean
+              architecture.
             </p>
           </motion.div>
         </div>
@@ -54,13 +55,13 @@ export function About() {
         >
           <h2 className="font-display text-[8vw] lg:text-section leading-none tracking-tight text-gray-300">
             "NAMED BY THE<br />
-            <span className="text-white underline underline-offset-8">2023 APERTURE AWARDS</span><br />
+            <span className="text-white underline underline-offset-8">2023 PRODUCT AWARDS</span><br />
             AS ONE OF THE TOP TEN<br />
-            PHOTOGRAPHERS IN THE WORLD."
+            INDIE DEVELOPERS TO WATCH."
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
-            GLOBAL PHOTOGRAPHY<br />
-            DIRECTOR RANK
+            GLOBAL TECH<br />
+            TALENT RANK
           </p>
         </motion.div>
 
@@ -71,10 +72,10 @@ export function About() {
             className="flex items-center lg:text-right"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              Bruce spent a little over a year in New York before moving to 
-              London as a Junior Photographer for Magnum Photos. He met some 
-              incredible people at the legendary agency, and they're still 
-              friends to this day.
+              From early experiments in Python and JavaScript to production systems
+              serving millions of users, Bruce has spent over a decade refining his
+              approach to product engineering. He cares as much about the user
+              experience as the code underneath it.
             </p>
           </motion.div>
 
@@ -83,12 +84,12 @@ export function About() {
             transition={{ ...fadeInUp.transition, delay: 0.2 }}
           >
             <img
-              src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Magnum Photos Office"
+              src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Lines of code on a monitor"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              MAGNUM PHOTOS - LONDON / UK
+              ENGINEERING DEEP WORK - SAN FRANCISCO / USA
             </p>
           </motion.div>
         </div>
@@ -97,13 +98,13 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
             <img
-              src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Bruce shooting for National Geographic"
+              src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Team collaborating around a laptop"
               className="w-full h-auto grayscale"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              SHOOTING FOR NATIONAL GEOGRAPHIC - PATAGONIA / AR<br />
-              (2019)
+              PRODUCT SQUAD - BERLIN / DE<br />
+              (2022)
             </p>
           </motion.div>
 
@@ -113,12 +114,10 @@ export function About() {
             className="flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              From London, Bruce moved to Berlin with VII Photo Agency. Where he 
-              worked under a great Art Director, Hans Mueller. From there he 
-              went on to build a truly global career, first as Staff Photographer 
-              then as Creative Director for the likes of National Geographic, 
-              Time Magazine, and The New York Times, before finally going 
-              independent in 2020.
+              Today Bruce works as an independent developer and consultant, helping
+              teams ship reliable software faster. He contributes to open source,
+              writes about engineering practices, and speaks at conferences when a
+              topic genuinely excites him.
             </p>
           </motion.div>
         </div>

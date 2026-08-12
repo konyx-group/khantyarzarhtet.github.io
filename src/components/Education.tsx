@@ -46,19 +46,19 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Computer Science & Visual Arts
+                  B.S. Computer Science & Engineering
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Started with algorithms, ended with apertures. Bruce's time at MIT 
-                  gave him a unique perspective on the intersection of technology 
-                  and visual storytelling that continues to influence his work today.
+                  Focused on distributed systems, algorithms, and human-computer
+                  interaction. Completed coursework in machine learning, software
+                  construction, and systems programming.
                 </p>
                 <p className="text-sm text-gray-500">2008 — 2012</p>
               </div>
             </motion.div>
           </div>
 
-          {/* Parsons */}
+          {/* Recurse Center */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div
               {...fadeInUp}
@@ -66,14 +66,14 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Photography & Visual Storytelling
+                  Recurse Center — Programming Retreat
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  The decision to pursue photography full-time led Bruce to Parsons, 
-                  where he developed his signature style of documentary portraiture 
-                  and learned the fundamentals of visual narrative.
+                  A self-directed, community-driven retreat where Bruce deepened his
+                  understanding of functional programming, compilers, and low-level
+                  systems while pair-programming with engineers from around the world.
                 </p>
-                <p className="text-sm text-gray-500">2013 — 2015</p>
+                <p className="text-sm text-gray-500">2015</p>
               </div>
             </motion.div>
 
@@ -83,26 +83,26 @@ export function Education() {
               className="lg:order-1"
             >
               <img
-                src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Parsons School of Design"
+                src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Developers collaborating in a modern space"
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+                RECURSE CENTER - NEW YORK / USA
               </p>
             </motion.div>
           </div>
 
-          {/* ICP */}
+          {/* AWS Cert */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="International Center of Photography"
+                src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Server room with blue lights"
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                ICP - NEW YORK / USA
+                CLOUD CERTIFICATION - REMOTE
               </p>
             </motion.div>
 
@@ -113,14 +113,14 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Documentary Photography Certificate
+                  AWS Solutions Architect — Professional
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  An intensive program at ICP refined Bruce's approach to long-form 
-                  documentary projects and deepened his understanding of photographic 
-                  ethics and storytelling responsibility.
+                  Validated expertise in designing distributed applications and systems
+                  on AWS. Covers high availability, security, cost optimization, and
+                  scalable cloud architecture.
                 </p>
-                <p className="text-sm text-gray-500">2016</p>
+                <p className="text-sm text-gray-500">2020</p>
               </div>
             </motion.div>
           </div>

@@ -1,45 +1,45 @@
 import { motion } from 'framer-motion'
 
-const experiences = [
+const projects = [
   {
-    title: 'Senior Photographer & Creative Director',
-    company: 'National Geographic',
-    location: 'Washington D.C.',
-    period: '2020 — Present',
-    description: 'Leading visual storytelling projects across five continents. Responsible for conceptualizing and executing long-form documentary series, managing a team of 8 photographers, and establishing visual guidelines for flagship publications.',
-    skills: ['Documentary Photography', 'Team Leadership', 'Art Direction', 'Visual Storytelling', 'Project Management'],
+    title: 'Real-Time Analytics Platform',
+    company: 'DataFlow',
+    location: 'Remote',
+    period: '2023 — Present',
+    description: 'Architected and built a real-time analytics dashboard handling 10M+ events per day. Reduced time-to-insight from hours to seconds using WebSockets, ClickHouse, and a custom React visualization layer.',
+    skills: ['React', 'TypeScript', 'Node.js', 'ClickHouse', 'WebSockets', 'Docker'],
   },
   {
-    title: 'Staff Photographer',
-    company: 'The New York Times',
-    location: 'New York, NY',
-    period: '2018 — 2020',
-    description: 'Covered breaking news, features, and editorial assignments for print and digital platforms. Specialized in portrait photography and human interest stories. Work featured on front page 47 times.',
-    skills: ['Editorial Photography', 'Breaking News', 'Portrait Photography', 'Deadline Management', 'Photo Editing'],
+    title: 'Design System & Component Library',
+    company: 'Stripe',
+    location: 'San Francisco, CA',
+    period: '2021 — 2023',
+    description: 'Led the migration of a legacy UI kit to a modern, accessible component library used by 40+ product teams. Improved Lighthouse accessibility scores by 35% and cut bundle size by 20%.',
+    skills: ['Design Systems', 'Accessibility', 'React', 'Storybook', 'Testing', 'CI/CD'],
   },
   {
-    title: 'Creative Director',
-    company: 'Time Magazine',
-    location: 'New York, NY',
-    period: '2016 — 2018',
-    description: 'Oversaw visual direction for special issues and cover stories. Collaborated with editors to develop compelling visual narratives. Managed relationships with contributing photographers worldwide.',
-    skills: ['Creative Direction', 'Visual Strategy', 'Team Coordination', 'Brand Identity', 'Magazine Publishing'],
+    title: 'E-Commerce API & Checkout',
+    company: 'Shopify',
+    location: 'Toronto, Canada',
+    period: '2019 — 2021',
+    description: 'Shipped core checkout APIs and payment integrations used by thousands of merchants. Focused on reliability, fraud prevention, and sub-100ms response times at scale.',
+    skills: ['GraphQL', 'Node.js', 'PostgreSQL', 'Redis', 'Payments', 'Performance'],
   },
   {
-    title: 'Staff Photographer',
-    company: 'VII Photo Agency',
+    title: 'Open Source CLI Tool',
+    company: 'Personal Project',
+    location: 'Open Source',
+    period: '2018 — Present',
+    description: 'Created and maintains a popular developer CLI with 500K+ monthly downloads. Built in TypeScript and distributed via npm, with plugin architecture and automated release pipelines.',
+    skills: ['TypeScript', 'CLI Design', 'Open Source', 'Automation', 'DX'],
+  },
+  {
+    title: 'Mobile-First Marketplace',
+    company: 'Early-Stage Startup',
     location: 'Berlin, Germany',
-    period: '2014 — 2016',
-    description: 'Worked on long-term documentary projects focusing on social issues and human rights. Assignments included coverage in conflict zones and humanitarian crises across Europe and Middle East.',
-    skills: ['Documentary', 'Conflict Photography', 'Humanitarian Coverage', 'Long-form Projects', 'Risk Assessment'],
-  },
-  {
-    title: 'Junior Photographer',
-    company: 'Magnum Photos',
-    location: 'London, UK',
-    period: '2012 — 2014',
-    description: 'Assisted senior photographers on international assignments. Developed technical skills in both digital and analog photography. First solo exhibition at the agency gallery in 2013.',
-    skills: ['Analog Photography', 'Digital Processing', 'Studio Lighting', 'Archive Management', 'Exhibition Curation'],
+    period: '2016 — 2018',
+    description: 'Joined as the first full-time engineer and helped build the MVP through Series A. Shipped iOS and Android apps with React Native and a Node.js backend serving 100K+ users.',
+    skills: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'Mobile'],
   },
 ]
 
@@ -56,7 +56,7 @@ export function Work() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Career</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Selected Work</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -64,14 +64,14 @@ export function Work() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
         >
-          WORK<br />EXPERIENCE
+          PROJECTS
         </motion.h2>
 
-        {/* Experiences */}
+        {/* Projects */}
         <div className="space-y-0">
-          {experiences.map((exp, index) => (
+          {projects.map((project, index) => (
             <motion.article
-              key={exp.company + exp.period}
+              key={project.company + project.period}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -82,30 +82,30 @@ export function Work() {
                 {/* Left Column - Title & Company */}
                 <div className="lg:col-span-5">
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-light text-white mb-2">
-                    {exp.title}
+                    {project.title}
                   </h3>
                   <p className="text-base lg:text-lg text-gray-400">
-                    {exp.company}
+                    {project.company}
                   </p>
                   <p className="text-sm text-gray-600 mt-2">
-                    {exp.location}
+                    {project.location}
                   </p>
                 </div>
 
                 {/* Middle Column - Period */}
                 <div className="lg:col-span-2">
                   <p className="text-sm text-gray-500 tracking-widest uppercase">
-                    {exp.period}
+                    {project.period}
                   </p>
                 </div>
 
                 {/* Right Column - Description & Skills */}
                 <div className="lg:col-span-5">
                   <p className="text-gray-400 leading-relaxed mb-6 text-sm lg:text-base">
-                    {exp.description}
+                    {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill) => (
+                    {project.skills.map((skill) => (
                       <span
                         key={skill}
                         className="px-3 py-1 text-xs text-gray-500 border border-gray-800 rounded-full"
