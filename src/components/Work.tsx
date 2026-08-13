@@ -2,44 +2,44 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Real-Time Analytics Platform',
-    company: 'DataFlow',
+    title: 'PHP Laravel Developer',
+    company: 'Current Professional Role',
+    location: 'Yangon, Myanmar',
+    period: '2026 — Present',
+    description: 'Developing and maintaining a scalable E-Learning Platform. Previously built dynamic web applications including a Music Web App and a Voting Web App. Focused on robust backend architecture, database optimization, and writing clean, maintainable code.',
+    skills: ['Laravel', 'PHP', 'MySQL', 'Web Apps', 'Backend Architecture'],
+  },
+  {
+    title: 'Mobile App Developer',
+    company: 'Professional Role',
+    location: 'Yangon, Myanmar',
+    period: 'Late 2025 — 2026',
+    description: 'Worked in a fast-paced environment developing multiple cross-platform mobile applications over a 6-month period. Successfully shipped diverse apps including School Management, Trip App, Shop App, Property App, Learning App, and Car App. Integrated Firebase for real-time data sync and backend services.',
+    skills: ['React Native', 'Firebase', 'Mobile Development', 'UI/UX', 'API Integration'],
+  },
+  {
+    title: 'Independent Mobile Developer',
+    company: 'Freelance & Personal Projects',
     location: 'Remote',
-    period: '2023 — Present',
-    description: 'Architected and built a real-time analytics dashboard handling 10M+ events per day. Reduced time-to-insight from hours to seconds using WebSockets, ClickHouse, and a custom React visualization layer.',
-    skills: ['React', 'TypeScript', 'Node.js', 'ClickHouse', 'WebSockets', 'Docker'],
+    period: '2025',
+    description: 'Designed and developed a suite of mobile applications featuring an E-Commerce platform, a Voting app, a Music streaming app, and "Loving 360". Emphasized responsive UI design, smooth animations, and seamless user experiences on both iOS and Android.',
+    skills: ['React Native', 'JavaScript', 'Cross-Platform', 'Mobile UI Design'],
   },
   {
-    title: 'Design System & Component Library',
-    company: 'Stripe',
-    location: 'San Francisco, CA',
-    period: '2021 — 2023',
-    description: 'Led the migration of a legacy UI kit to a modern, accessible component library used by 40+ product teams. Improved Lighthouse accessibility scores by 35% and cut bundle size by 20%.',
-    skills: ['Design Systems', 'Accessibility', 'React', 'Storybook', 'Testing', 'CI/CD'],
+    title: 'Employee Management System',
+    company: 'OJT Project',
+    location: 'MST College Training',
+    period: '2025',
+    description: 'Built a comprehensive Employee Management System from scratch using Pure PHP. Designed the relational database architecture and developed clean, functional interfaces for employee tracking and HR administration.',
+    skills: ['Pure PHP', 'MySQL', 'HTML/CSS', 'System Design', 'Relational Databases'],
   },
   {
-    title: 'E-Commerce API & Checkout',
-    company: 'Shopify',
-    location: 'Toronto, Canada',
-    period: '2019 — 2021',
-    description: 'Shipped core checkout APIs and payment integrations used by thousands of merchants. Focused on reliability, fraud prevention, and sub-100ms response times at scale.',
-    skills: ['GraphQL', 'Node.js', 'PostgreSQL', 'Redis', 'Payments', 'Performance'],
-  },
-  {
-    title: 'Open Source CLI Tool',
-    company: 'Personal Project',
-    location: 'Open Source',
-    period: '2018 — Present',
-    description: 'Created and maintains a popular developer CLI with 500K+ monthly downloads. Built in TypeScript and distributed via npm, with plugin architecture and automated release pipelines.',
-    skills: ['TypeScript', 'CLI Design', 'Open Source', 'Automation', 'DX'],
-  },
-  {
-    title: 'Mobile-First Marketplace',
-    company: 'Early-Stage Startup',
-    location: 'Berlin, Germany',
-    period: '2016 — 2018',
-    description: 'Joined as the first full-time engineer and helped build the MVP through Series A. Shipped iOS and Android apps with React Native and a Node.js backend serving 100K+ users.',
-    skills: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'Mobile'],
+    title: 'Point of Sale (POS) System',
+    company: 'MST College (Final Project)',
+    location: 'Yangon, Myanmar',
+    period: '2025',
+    description: 'Developed a robust desktop Point of Sale (POS) application using JavaFX as the capstone project. Implemented inventory management, secure transaction handling, and a user-friendly cashier interface utilizing Object-Oriented Programming principles.',
+    skills: ['Java', 'JavaFX', 'Desktop Application', 'OOP', 'Database Management'],
   },
 ]
 
@@ -54,15 +54,18 @@ export function Work() {
   return (
     <section id="work" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Selected Work</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        {/* Section Label */}
+        <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            Selected Work
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
+        {/* Section Title - smaller */}
         <motion.h2
           {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
+          className="font-display text-4xl sm:text-5xl md:text-6xl leading-none tracking-tight mb-12 lg:mb-16"
         >
           PROJECTS
         </motion.h2>
@@ -76,18 +79,18 @@ export function Work() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.1 }}
-              className="border-t border-gray-800 py-8 md:py-12 lg:py-16 group"
+              className="border-t border-gray-800 py-8 md:py-10 lg:py-12 group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
                 {/* Left Column - Title & Company */}
                 <div className="lg:col-span-5">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-light text-white mb-2">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-light text-white mb-2 group-hover:text-gray-100 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-base lg:text-lg text-gray-400">
+                  <p className="text-sm md:text-base text-gray-400">
                     {project.company}
                   </p>
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-xs text-gray-600 mt-2">
                     {project.location}
                   </p>
                 </div>
@@ -101,14 +104,14 @@ export function Work() {
 
                 {/* Right Column - Description & Skills */}
                 <div className="lg:col-span-5">
-                  <p className="text-gray-400 leading-relaxed mb-6 text-sm lg:text-base">
+                  <p className="text-gray-400 leading-relaxed mb-6 text-sm">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1 text-xs text-gray-500 border border-gray-800 rounded-full"
+                        className="px-3 py-1 text-xs text-gray-500 border border-gray-800 rounded-full hover:border-white/20 hover:text-white hover:bg-white/[0.03] transition-all duration-300"
                       >
                         {skill}
                       </span>

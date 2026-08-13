@@ -10,32 +10,36 @@ export function Hero() {
           alt="Developer workspace with code on screen"
           className="w-full h-full object-cover object-center"
         />
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-end md:items-center pb-32 md:pb-0 px-4 sm:px-6 md:px-12 lg:px-16">
-        <div className="w-full max-w-5xl">
-          {/* Typography */}
+      <div className="relative z-10 h-full flex items-end md:items-center pb-24 md:pb-0 px-6 sm:px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-3xl">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
           >
-            <h1 className="font-display leading-none tracking-tighter text-[15vw] sm:text-[12vw] md:text-hero">
-              <span className="block text-white">BRUCE</span>
-              <span className="block text-white">BANNER</span>
-              <span className="block text-white">DEVELOPER</span>
+            {/* Small badge */}
+            <span className="inline-block mb-5 px-3 py-1 text-xs sm:text-sm font-medium tracking-widest uppercase text-white/90 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+              Full Stack Developer
+            </span>
+
+            {/* Name - smaller and cleaner */}
+            <h1 className="font-display leading-none tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+              <span className="block text-white">KHANT YAR ZAR</span>
+              <span className="block text-white/90">HTET</span>
             </h1>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="mt-6 md:mt-8 text-sm sm:text-base text-white/80 max-w-sm md:max-w-md leading-relaxed"
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="mt-6 text-sm sm:text-base text-white/80 max-w-md leading-relaxed"
             >
-              Full stack developer focused on building fast, accessible, and human-centered web applications. Currently shipping TypeScript, React, and Node.js products.
+              Full stack developer focused on building fast, accessible, and human-centered mobile and web applications. Currently shipping Java, JavaScript, TypeScript, React, ReactNative, PHP, Laravel and Node.js products.
             </motion.p>
           </motion.div>
         </div>

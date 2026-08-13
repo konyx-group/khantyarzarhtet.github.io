@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const contacts = [
-  { label: 'OPEN SOURCE', type: 'location', link: 'https://github.com/brucebanner' },
-  { label: 'PROFESSIONAL', type: 'location', link: 'https://linkedin.com/in/brucebanner' },
+  { label: 'OPEN SOURCE', type: 'location', link: 'https://github.com/khantyarzarhtet' },
+  { label: 'PROFESSIONAL', type: 'location', link: 'https://linkedin.com/in/khantyarzarhtet' },
 ]
 
 const fadeInUp = {
@@ -17,18 +17,20 @@ export function Contact() {
     <section id="contact" className="section-padding">
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Contact</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            Contact
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
-        {/* Giant Headline */}
+        {/* Headline - smaller */}
         <motion.h2
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="font-display text-[12vw] lg:text-hero leading-none tracking-tight mb-8"
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight mb-8"
         >
           Get in touch
         </motion.h2>
@@ -43,7 +45,7 @@ export function Contact() {
           {...fadeInUp}
           className="mb-12 lg:mb-16 max-w-2xl"
         >
-          <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-light leading-tight mb-4">
+          <h3 className="text-xl md:text-2xl text-white font-light leading-tight mb-4">
             I'M CURRENTLY<br />
             OPEN TO SELECT<br />
             PROJECTS & ROLES
@@ -65,9 +67,9 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-center justify-between border-t border-gray-800 py-5 md:py-6 group hover:bg-gray-900/30 transition-colors px-4 -mx-4"
+              className="flex items-center justify-between border-t border-gray-800 py-5 group hover:bg-gray-900/30 transition-colors px-4 -mx-4"
             >
-              <span className="text-sm text-gray-400 tracking-widest">
+              <span className="text-sm text-gray-400 tracking-widest group-hover:text-white transition-colors">
                 {contact.label}
               </span>
               <span className="text-gray-500 group-hover:text-white transition-colors">
@@ -88,24 +90,24 @@ export function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
             <a
-              href="mailto:bruce@banner.dev"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              href="mailto:khantyarzarhtet@example.com"
+              className="text-base lg:text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              bruce@banner.dev
+              kyzhtet@gmail.com
             </a>
             <a
-              href="https://github.com/brucebanner"
+              href="https://github.com/khantyarzarhtet"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              className="text-base lg:text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/brucebanner"
+              href="https://linkedin.com/in/khantyarzarhtet"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              className="text-base lg:text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
               LinkedIn
             </a>
@@ -114,14 +116,17 @@ export function Contact() {
 
         {/* Footer */}
         <motion.footer
-          {...fadeInUp}
-          className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="mt-24 lg:mt-32 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Bruce Banner. All rights reserved.
+          <p className="text-xs text-gray-400">
+            © {new Date().getFullYear()} Khant Yar Zar Htet. All rights reserved.
           </p>
-          <p className="text-xs text-gray-600">
-            San Francisco / Remote
+          <p className="text-xs text-gray-400">
+            Myanmar
           </p>
         </motion.footer>
       </div>

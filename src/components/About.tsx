@@ -12,12 +12,14 @@ export function About() {
     <section id="about" className="section-padding">
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">About Bruce</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        <motion.div {...fadeInUp} className="mb-16 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            About Khant
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
-        {/* First Block */}
+        {/* First Block - Education & Foundation */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div
             {...fadeInUp}
@@ -26,10 +28,10 @@ export function About() {
             <img
               src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Developer at a laptop in a modern workspace"
-              className="w-full h-auto grayscale"
+              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              MIT - CAMBRIDGE / USA
+              UCSY & MST COLLEGE / MYANMAR
             </p>
           </motion.div>
 
@@ -39,43 +41,36 @@ export function About() {
             className="order-1 lg:order-2 flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              Bruce started in computer science at MIT, where he fell in love with the
-              craft of turning ideas into software. After years of building across
-              startups and established product teams, he now specializes in full stack
-              web development with a focus on performance, accessibility, and clean
-              architecture.
+              After graduating high school with 3 distinctions, my journey in computer science began at the University of Computer Studies, Yangon (UCSY). Driven by a passion for practical engineering, I expanded my horizons at MST College, where I studied Japan's ITPEC programs and proudly passed the Fundamental Information Technology Engineer (FE) examination in April 2025.
             </p>
           </motion.div>
         </div>
 
-        {/* Quote Block */}
+        {/* Quote Block - Highlight Achievement */}
         <motion.div
           {...fadeInUp}
           className="mb-24 lg:mb-32"
         >
-          <h2 className="font-display text-[8vw] lg:text-section leading-none tracking-tight text-gray-300">
-            "NAMED BY THE<br />
-            <span className="text-white underline underline-offset-8">2023 PRODUCT AWARDS</span><br />
-            AS ONE OF THE TOP TEN<br />
-            INDIE DEVELOPERS TO WATCH."
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-gray-300">
+            "CERTIFIED FUNDAMENTAL<br />
+            <span className="text-white underline underline-offset-8">IT ENGINEER (FE)</span><br />
+            WITH A PASSION FOR<br />
+            CLEAN ARCHITECTURE."
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
-            GLOBAL TECH<br />
-            TALENT RANK
+            JAPAN ITPEC CERTIFICATION <br />
+            2025
           </p>
         </motion.div>
 
-        {/* Second Block */}
+        {/* Second Block - Projects & OJT Experience */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div
             {...fadeInUp}
             className="flex items-center lg:text-right"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              From early experiments in Python and JavaScript to production systems
-              serving millions of users, Bruce has spent over a decade refining his
-              approach to product engineering. He cares as much about the user
-              experience as the code underneath it.
+              I believe in learning by building. From developing a fully functional POS system using JavaFX to crafting an Employee Management System with pure PHP during my On-the-Job Training, I have consistently focused on solving real-world problems. I continuously upgrade my tech stack, mastering PHP, Laravel, and React.
             </p>
           </motion.div>
 
@@ -89,22 +84,22 @@ export function About() {
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              ENGINEERING DEEP WORK - SAN FRANCISCO / USA
+              SYSTEM DEVELOPMENT & OJT EXPERIENCE
             </p>
           </motion.div>
         </div>
 
-        {/* Third Block */}
+        {/* Third Block - Current Career */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
             <img
               src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Team collaborating around a laptop"
-              className="w-full h-auto grayscale"
+              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              PRODUCT SQUAD - BERLIN / DE<br />
-              (2022)
+              PROFESSIONAL JOURNEY<br />
+              (2025 - PRESENT)
             </p>
           </motion.div>
 
@@ -114,10 +109,7 @@ export function About() {
             className="flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              Today Bruce works as an independent developer and consultant, helping
-              teams ship reliable software faster. He contributes to open source,
-              writes about engineering practices, and speaks at conferences when a
-              topic genuinely excites him.
+              After gaining diverse industry experience—including working as a Mobile Developer in late 2025—I currently work full-time as a PHP Laravel Developer. Today, my focus is on writing robust back-end code, building scalable web applications, and delivering reliable software solutions.
             </p>
           </motion.div>
         </div>

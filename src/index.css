@@ -122,21 +122,26 @@
   background: #444;
 }
 
-/* Section spacing */
+/* For Section Padding */
 .section-padding {
-  padding: 8rem 2rem;
+  padding: 4rem 1.5rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 12rem 4rem;
+    padding: 2rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding: 16rem 6rem;
+    padding: 5rem 4rem;
   }
+}
+
+/* Sections with ids used for smooth scrolling get breathing room */
+section[id] {
+  scroll-margin-top: 0rem;
 }
 
 /* Image grayscale filter */
