@@ -1,12 +1,8 @@
-# KONYX Portfolio
+# KONYX User Portfolio
 
 quero importar um projeto do github
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/888cea8d-e481-4b5d-9e89-2354e24ca58b).
+## Build
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.
