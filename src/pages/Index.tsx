@@ -1,9 +1,11 @@
 import { Navigation } from '@/components/Navigation'
 import { GrainOverlay } from '@/components/GrainOverlay'
 import { Hero } from '@/components/Hero'
+import { Stats } from '@/components/Stats'
 import { About } from '@/components/About'
 import { Skills } from '@/components/Skills'
 import { Work } from '@/components/Work'
+import { Certifications } from '@/components/Certifications'
 import { Education } from '@/components/Education'
 import { Writing } from '@/components/Writing'
 import { Speaking } from '@/components/Speaking'
@@ -16,9 +18,11 @@ export default function Index() {
       <Navigation />
       <main>
         <Hero />
+        <Stats />
         <About />
         <Skills />
         <Work />
+        <Certifications />
         <Education />
         <Writing />
         <Speaking />

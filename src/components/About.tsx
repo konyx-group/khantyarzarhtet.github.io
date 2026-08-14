@@ -19,7 +19,7 @@ export function About() {
           <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
-        {/* First Block - Education & Foundation */}
+        {/* First Block - Personal Intro */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div
             {...fadeInUp}
@@ -31,7 +31,7 @@ export function About() {
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              UCSY & MST COLLEGE / MYANMAR
+              FULL STACK DEVELOPER / MYANMAR
             </p>
           </motion.div>
 
@@ -41,36 +41,35 @@ export function About() {
             className="order-1 lg:order-2 flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              After graduating high school with 3 distinctions, my journey in computer science began at the University of Computer Studies, Yangon (UCSY). Driven by a passion for practical engineering, I expanded my horizons at MST College, where I studied Japan's ITPEC programs and proudly passed the Fundamental Information Technology Engineer (FE) examination in April 2025.
+              Hi, I'm Khant — a full-stack developer focused on turning complex problems into fast, accessible, and human-centered applications. I care deeply about clean code, thoughtful design, and building software that genuinely makes a difference.
             </p>
           </motion.div>
         </div>
 
-        {/* Quote Block - Highlight Achievement */}
+        {/* Quote Block - Philosophy */}
         <motion.div
           {...fadeInUp}
           className="mb-24 lg:mb-32"
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-gray-300">
-            "CERTIFIED FUNDAMENTAL<br />
-            <span className="text-white underline underline-offset-8">IT ENGINEER (FE)</span><br />
-            WITH A PASSION FOR<br />
-            CLEAN ARCHITECTURE."
+            "BUILDING FAST,<br />
+            <span className="text-white underline underline-offset-8">ACCESSIBLE</span>, AND<br />
+            HUMAN-CENTERED<br />
+            SOFTWARE."
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
-            JAPAN ITPEC CERTIFICATION <br />
-            2025
+            MY DEVELOPMENT PHILOSOPHY
           </p>
         </motion.div>
 
-        {/* Second Block - Projects & OJT Experience */}
+        {/* Second Block - Learning by Building */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div
             {...fadeInUp}
             className="flex items-center lg:text-right"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              I believe in learning by building. From developing a fully functional POS system using JavaFX to crafting an Employee Management System with pure PHP during my On-the-Job Training, I have consistently focused on solving real-world problems. I continuously upgrade my tech stack, mastering PHP, Laravel, and React.
+              I believe in learning by building. Every project is a chance to solve real-world problems and sharpen my craft — from desktop applications to cross-platform mobile apps and scalable web platforms. I'm always exploring new technologies and pushing my boundaries further.
             </p>
           </motion.div>
 
@@ -84,7 +83,7 @@ export function About() {
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              SYSTEM DEVELOPMENT & OJT EXPERIENCE
+              LEARNING BY BUILDING
             </p>
           </motion.div>
         </div>
