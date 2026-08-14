@@ -7,6 +7,8 @@ const navItems = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'work', label: 'Work' },
+  // { id: 'github', label: 'GitHub' },
+  // { id: 'testimonials', label: 'Testimonials' },
   { id: 'certifications', label: 'Certifications' },
   { id: 'education', label: 'Education' },
   { id: 'writing', label: 'Writing' },
@@ -14,6 +16,7 @@ const navItems = [
 ]
 
 const socialLinks = [
+  // { label: 'Resume', href: '/resume.html' },
   { label: 'Mail', href: 'mailto:kyzhtet@gmail.com' },
   { label: 'GitHub', href: 'https://github.com/khantyarzarhtet' },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/khantyarzarhtet' },
@@ -88,6 +91,13 @@ export function Navigation() {
       {/* Desktop Social Links - Fixed Top Right (hidden on mobile) */}
       <div className="hidden md:block fixed top-0 right-0 z-50 p-6 md:p-10">
         <div className="flex items-center gap-6 justify-end">
+          <span className="flex items-center gap-2 text-xs text-white/70 mix-blend-difference">
+            <span className="relative flex w-2 h-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full w-2 h-2 bg-green-400" />
+            </span>
+            Open to work
+          </span>
           {socialLinks.map((link) => (
             <a
               key={link.label}

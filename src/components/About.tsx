@@ -28,6 +28,7 @@ export function About() {
             <img
               src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Developer at a laptop in a modern workspace"
+              loading="lazy"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
@@ -80,6 +81,7 @@ export function About() {
             <img
               src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Lines of code on a monitor"
+              loading="lazy"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
@@ -94,6 +96,7 @@ export function About() {
             <img
               src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Team collaborating around a laptop"
+              loading="lazy"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">

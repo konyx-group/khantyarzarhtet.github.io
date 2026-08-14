@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 const stats = [
   { value: '2+', label: 'Years Coding' },
   { value: '15+', label: 'Projects Shipped' },
-  { value: '6+', label: 'Mobile Apps Built' },
-  { value: '1', label: 'ITPEC FE Certified' },
+  { value: '10+', label: 'Mobile Apps Built' },
+  { value: '5', label: 'Certifications' },
 ]
 
 const fadeInUp = {

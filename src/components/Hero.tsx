@@ -1,6 +1,49 @@
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+const ROLES = [
+  'Full Stack Developer',
+  'PHP Laravel Developer',
+  'React Native Developer',
+  'UI/UX Enthusiast',
+]
+
+function useTypewriter(words: string[], typeSpeed = 80, deleteSpeed = 40, pauseTime = 1600) {
+  const [wordIndex, setWordIndex] = useState(0)
+  const [text, setText] = useState('')
+  const [deleting, setDeleting] = useState(false)
+
+  useEffect(() => {
+    const current = words[wordIndex % words.length]
+    let timeout: ReturnType<typeof setTimeout>
+
+    if (!deleting && text === current) {
+      // Pause at full word
+      timeout = setTimeout(() => setDeleting(true), pauseTime)
+    } else if (deleting && text === '') {
+      // Move to next word
+      setDeleting(false)
+      setWordIndex((prev) => (prev + 1) % words.length)
+    } else {
+      timeout = setTimeout(
+        () => {
+          setText((prev) =>
+            deleting ? current.slice(0, prev.length - 1) : current.slice(0, prev.length + 1)
+          )
+        },
+        deleting ? deleteSpeed : typeSpeed
+      )
+    }
+
+    return () => clearTimeout(timeout)
+  }, [text, deleting, wordIndex, words, typeSpeed, deleteSpeed, pauseTime])
+
+  return text
+}
+
 export function Hero() {
+  const typedRole = useTypewriter(ROLES)
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image - Responsive */}
@@ -22,9 +65,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
-            {/* Small badge */}
+            {/* Typing badge */}
             <span className="inline-block mb-5 px-3 py-1 text-xs sm:text-sm font-medium tracking-widest uppercase text-white/90 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
-              Full Stack Developer
+              {typedRole}
+              <span className="ml-1 inline-block w-[2px] h-[0.9em] bg-white/80 align-middle animate-pulse" />
             </span>
 
             {/* Name - smaller and cleaner */}

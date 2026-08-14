@@ -35,6 +35,7 @@ export function Education() {
               <img
                 src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="University of Computer Studies, Yangon"
+                loading="lazy"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
@@ -84,6 +85,7 @@ export function Education() {
               <img
                 src="https://images.pexels.com/photos/159866/books-education-school-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Books and education"
+                loading="lazy"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
@@ -98,6 +100,7 @@ export function Education() {
               <img
                 src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Laptop with code"
+                loading="lazy"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
