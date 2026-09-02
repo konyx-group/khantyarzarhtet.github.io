@@ -11,31 +11,35 @@ export function Education() {
   return (
     <section id="education" className="section-padding bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Background</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        {/* Section Label */}
+        <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            Background
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
+        {/* Section Title - smaller */}
         <motion.h2
           {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
+          className="font-display text-4xl sm:text-5xl md:text-6xl leading-none tracking-tight mb-12 lg:mb-16"
         >
           EDUCATION
         </motion.h2>
 
         {/* Education Items */}
-        <div className="space-y-16 lg:space-y-24">
-          {/* MIT */}
+        <div className="space-y-16 lg:space-y-20">
+          {/* UCSY */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="MIT Campus"
-                className="w-full h-auto grayscale"
+                src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="University of Computer Studies, Yangon"
+                loading="lazy"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                MIT - CAMBRIDGE / USA
+                UNIVERSITY OF COMPUTER STUDIES, YANGON (UCSY)
               </p>
             </motion.div>
 
@@ -46,19 +50,17 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  B.S. Computer Science & Engineering
+                  Computer Science
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Focused on distributed systems, algorithms, and human-computer
-                  interaction. Completed coursework in machine learning, software
-                  construction, and systems programming.
+                  My journey in computer science began here, driven by a passion for practical engineering. Foundation in programming, algorithms, and software development.
                 </p>
-                <p className="text-sm text-gray-500">2008 — 2012</p>
+                <p className="text-sm text-gray-500">Yangon, Myanmar</p>
               </div>
             </motion.div>
           </div>
 
-          {/* Recurse Center */}
+          {/* MST College */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div
               {...fadeInUp}
@@ -66,14 +68,12 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Recurse Center — Programming Retreat
+                  ITPEC — Fundamental Information Technology Engineer (FE)
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  A self-directed, community-driven retreat where Bruce deepened his
-                  understanding of functional programming, compilers, and low-level
-                  systems while pair-programming with engineers from around the world.
+                  Studied Japan's ITPEC programs at MST College and proudly passed the Fundamental Information Technology Engineer (FE) examination in April 2025.
                 </p>
-                <p className="text-sm text-gray-500">2015</p>
+                <p className="text-sm text-gray-500">April 2025</p>
               </div>
             </motion.div>
 
@@ -83,26 +83,28 @@ export function Education() {
               className="lg:order-1"
             >
               <img
-                src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Developers collaborating in a modern space"
-                className="w-full h-auto grayscale"
+                src="https://images.pexels.com/photos/159866/books-education-school-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Books and education"
+                loading="lazy"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                RECURSE CENTER - NEW YORK / USA
+                MST COLLEGE / MYANMAR
               </p>
             </motion.div>
           </div>
 
-          {/* AWS Cert */}
+          {/* OJT Experience */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Server room with blue lights"
-                className="w-full h-auto grayscale"
+                src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Laptop with code"
+                loading="lazy"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                CLOUD CERTIFICATION - REMOTE
+                ON-THE-JOB TRAINING
               </p>
             </motion.div>
 
@@ -113,14 +115,12 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  AWS Solutions Architect — Professional
+                  OJT — Employee Management System
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Validated expertise in designing distributed applications and systems
-                  on AWS. Covers high availability, security, cost optimization, and
-                  scalable cloud architecture.
+                  Crafted an Employee Management System with pure PHP during my On-the-Job Training, focused on solving real-world problems and building practical engineering skills.
                 </p>
-                <p className="text-sm text-gray-500">2020</p>
+                <p className="text-sm text-gray-500">2025</p>
               </div>
             </motion.div>
           </div>

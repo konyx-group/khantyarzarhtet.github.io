@@ -7,15 +7,19 @@ const navItems = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'work', label: 'Work' },
+  // { id: 'github', label: 'GitHub' },
+  // { id: 'testimonials', label: 'Testimonials' },
+  { id: 'certifications', label: 'Certifications' },
   { id: 'education', label: 'Education' },
   { id: 'writing', label: 'Writing' },
   { id: 'speaking', label: 'Speaking' },
 ]
 
 const socialLinks = [
-  { label: 'Mail', href: 'mailto:bruce@banner.dev' },
-  { label: 'GitHub', href: 'https://github.com/brucebanner' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/brucebanner' },
+  // { label: 'Resume', href: '/resume.html' },
+  { label: 'Mail', href: 'mailto:kyzhtet@gmail.com' },
+  { label: 'GitHub', href: 'https://github.com/khantyarzarhtet' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/khantyarzarhtet' },
 ]
 
 export function Navigation() {
@@ -40,31 +44,32 @@ export function Navigation() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-sm text-white mix-blend-difference"
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {mobileMenuOpen ? 'Close' : 'Menu'}
           </button>
 
           {/* Mobile Menu Dropdown */}
-          <div
-            className={cn(
-              'flex flex-col items-start gap-3 mt-6 transition-all duration-300',
-              mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
-            )}
-          >
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={cn(
-                  'text-sm text-white mix-blend-difference transition-all duration-300 relative py-1',
-                  'hover:opacity-60',
-                  activeSection === item.id && 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-white'
-                )}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
+          {mobileMenuOpen && (
+            <div className="absolute left-0 mt-4 w-48 bg-[#111] border border-white/10 rounded-lg backdrop-blur-sm shadow-xl shadow-black/50 overflow-hidden">
+              <div className="py-2">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={cn(
+                      'w-full text-left px-5 py-3 text-sm text-white transition-colors duration-200',
+                      'hover:bg-white/5',
+                      activeSection === item.id && 'bg-white/[0.06] text-white'
+                    )}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Social Links - Right (Mobile) */}
@@ -86,6 +91,13 @@ export function Navigation() {
       {/* Desktop Social Links - Fixed Top Right (hidden on mobile) */}
       <div className="hidden md:block fixed top-0 right-0 z-50 p-6 md:p-10">
         <div className="flex items-center gap-6 justify-end">
+          <span className="flex items-center gap-2 text-xs text-white/70 mix-blend-difference">
+            <span className="relative flex w-2 h-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full w-2 h-2 bg-green-400" />
+            </span>
+            Open to work
+          </span>
           {socialLinks.map((link) => (
             <a
               key={link.label}

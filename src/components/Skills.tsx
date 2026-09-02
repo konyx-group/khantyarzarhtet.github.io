@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 
 const skills = [
-  'React & Next.js',
-  'TypeScript',
-  'Node.js',
-  'Python',
-  'PostgreSQL',
-  'Cloud Infrastructure',
-  'System Design',
-  'UI Engineering',
+  'PHP & Laravel',
+  'React.js',
+  'React Native',
+  'JavaScript / HTML / CSS',
+  'Java & JavaFX',
+  'MySQL / Relational Databases',
+  'Clean UI/UX Design',
+  'System Design & Architecture'
 ]
 
 const fadeInUp = {
@@ -22,31 +22,35 @@ export function Skills() {
   return (
     <section id="skills" className="section-padding bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Expertise</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        {/* Section Label */}
+        <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            Expertise
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
+        {/* Section Title - smaller */}
         <motion.h2
           {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-12 lg:mb-20"
+          className="font-display text-4xl sm:text-5xl md:text-6xl leading-none tracking-tight mb-12 lg:mb-16"
         >
           SKILLS
         </motion.h2>
 
-        {/* Skills List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 lg:gap-y-6">
+        {/* Skills Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border-b border-gray-800 pb-4"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="group flex items-center gap-3 px-5 py-4 bg-white/[0.03] border border-white/10 rounded-lg hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
             >
-              <span className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light">
+              <span className="flex-none w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:bg-white transition-colors duration-300" />
+              <span className="text-sm md:text-base text-gray-300 group-hover:text-white transition-colors duration-300">
                 {skill}
               </span>
             </motion.div>

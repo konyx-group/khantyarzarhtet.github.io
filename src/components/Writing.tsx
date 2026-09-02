@@ -2,27 +2,27 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
-    title: 'Building Resilient React Components',
-    publication: 'Frontend Masters Blog',
-    year: '2024',
+    title: 'Getting Started with Laravel: A Practical Guide',
+    publication: 'Personal Blog',
+    year: '2026',
     link: '#',
   },
   {
-    title: 'The Case for Type-Driven Development',
-    publication: 'TypeScript Weekly',
-    year: '2023',
+    title: 'Building Cross-Platform Apps with React Native',
+    publication: 'Personal Blog',
+    year: '2025',
     link: '#',
   },
   {
-    title: 'Scaling Node.js Services Without Losing Sleep',
-    publication: 'Node.js Foundation',
-    year: '2022',
+    title: 'My Journey Passing the ITPEC FE Exam',
+    publication: 'MST College Journal',
+    year: '2025',
     link: '#',
   },
   {
-    title: 'Why Accessibility Is a Performance Problem',
-    publication: 'Smashing Magazine',
-    year: '2021',
+    title: 'Clean Architecture Principles for PHP Developers',
+    publication: 'Personal Blog',
+    year: '2025',
     link: '#',
   },
 ]
@@ -38,15 +38,18 @@ export function Writing() {
   return (
     <section id="writing" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Essays & Articles</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        {/* Section Label */}
+        <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            Essays & Articles
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
+        {/* Section Title - smaller */}
         <motion.h2
           {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
+          className="font-display text-4xl sm:text-5xl md:text-6xl leading-none tracking-tight mb-12 lg:mb-16"
         >
           WRITING
         </motion.h2>

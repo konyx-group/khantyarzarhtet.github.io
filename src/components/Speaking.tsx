@@ -2,33 +2,27 @@ import { motion } from 'framer-motion'
 
 const talks = [
   {
-    title: 'TypeScript at Scale: Lessons from the Trenches',
-    event: 'React Summit',
-    year: '2024',
+    title: 'Building Scalable Web Applications with Laravel',
+    event: 'Team Knowledge Sharing',
+    year: '2026',
     link: '#',
   },
   {
-    title: 'Building Accessible Design Systems',
-    event: 'Design Systems Conference',
-    year: '2023',
+    title: 'From JavaFX to Modern Web: My Development Journey',
+    event: 'MST College Tech Talk',
+    year: '2025',
     link: '#',
   },
   {
-    title: 'Real-Time Data Without the Headaches',
-    event: 'NodeConf EU',
-    year: '2023',
+    title: 'Introduction to React Native for Cross-Platform Development',
+    event: 'Developer Meetup',
+    year: '2025',
     link: '#',
   },
   {
-    title: 'From Side Project to Open Source Product',
-    event: 'GitHub Universe',
-    year: '2022',
-    link: '#',
-  },
-  {
-    title: 'Performance Budgets for Modern Web Apps',
-    event: 'Web Performance Now',
-    year: '2021',
+    title: 'Passing the ITPEC FE Exam: Tips & Study Strategies',
+    event: 'MST College Workshop',
+    year: '2025',
     link: '#',
   },
 ]
@@ -44,15 +38,18 @@ export function Speaking() {
   return (
     <section id="speaking" className="section-padding bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Talks & Lectures</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        {/* Section Label */}
+        <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            Talks & Lectures
+          </span>
+          <div className="flex-1 h-px bg-gray-600" />
         </motion.div>
 
+        {/* Section Title - smaller */}
         <motion.h2
           {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
+          className="font-display text-4xl sm:text-5xl md:text-6xl leading-none tracking-tight mb-12 lg:mb-16"
         >
           SPEAKING
         </motion.h2>
