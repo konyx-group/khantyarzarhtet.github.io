@@ -1,31 +1,5 @@
 import { motion } from 'framer-motion'
-
-const articles = [
-  {
-    title: 'Getting Started with Laravel: A Practical Guide',
-    publication: 'Personal Blog',
-    year: '2026',
-    link: '#',
-  },
-  {
-    title: 'Building Cross-Platform Apps with React Native',
-    publication: 'Personal Blog',
-    year: '2025',
-    link: '#',
-  },
-  {
-    title: 'My Journey Passing the ITPEC FE Exam',
-    publication: 'MST College Journal',
-    year: '2025',
-    link: '#',
-  },
-  {
-    title: 'Clean Architecture Principles for PHP Developers',
-    publication: 'Personal Blog',
-    year: '2025',
-    link: '#',
-  },
-]
+import { ARTICLES } from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -56,7 +30,7 @@ export function Writing() {
 
         {/* Articles List */}
         <div className="space-y-0">
-          {articles.map((article, index) => (
+          {ARTICLES.map((article, index) => (
             <motion.a
               key={article.title}
               href={article.link}

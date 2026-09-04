@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HERO_IMAGE_URL, RESUME_URL } from '@/lib/constants'
-
-const ROLES = [
-  'Full Stack Developer',
-  'PHP Laravel Developer',
-  'React Native Developer',
-  'UI/UX Enthusiast',
-]
+import { ROLES } from '@/lib/data'
 
 function useTypewriter(words: string[], typeSpeed = 80, deleteSpeed = 40, pauseTime = 1600) {
   const [wordIndex, setWordIndex] = useState(0)

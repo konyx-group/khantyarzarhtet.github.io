@@ -1,11 +1,5 @@
 import { motion } from 'framer-motion'
-
-const stats = [
-  { value: '2+', label: 'Years Coding' },
-  { value: '15+', label: 'Projects Shipped' },
-  { value: '10+', label: 'Mobile Apps Built' },
-  { value: '5', label: 'Certifications' },
-]
+import { STATS } from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -19,7 +13,7 @@ export function Stats() {
     <section className="bg-[#0d0d0d] border-y border-gray-900">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-10 md:py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {stats.map((stat, index) => (
+          {STATS.map((stat, index) => (
             <motion.div
               key={stat.label}
               {...fadeInUp}

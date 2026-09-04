@@ -25,6 +25,25 @@ export const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/r
 export const LINKEDIN_URL = 'https://linkedin.com/in/khantyarzarhtet'
 export const TELEGRAM_URL = 'https://t.me/KYZH8'
 
+// ---- Location ----
+export const LOCATION = 'Yangon, Myanmar'
+
+// ---- Placeholder (for not-yet-available links) ----
+export const PLACEHOLDER_LINK = '#'
+
+// ---- Section meta (navigation + section anchors) ----
+// Note: `id` တွေက section anchor scroll နဲ့ဆိုင်လို့
+// ဒီကနေပဲ nav + section တညီတညီ ဖြစ်နေအောင် ထိန်းထားတယ်။
+export const SECTIONS = [
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'work', label: 'Work' },
+  { id: 'certifications', label: 'Certifications' },
+  { id: 'education', label: 'Education' },
+  { id: 'writing', label: 'Writing' },
+  { id: 'speaking', label: 'Speaking' },
+] as const
+
 // ---- Resume ----
 export const RESUME_URL = `${import.meta.env.BASE_URL}resume.html`
 

@@ -1,15 +1,5 @@
 import { motion } from 'framer-motion'
-
-const skills = [
-  'PHP & Laravel',
-  'React.js',
-  'React Native',
-  'JavaScript / HTML / CSS',
-  'Java & JavaFX',
-  'MySQL / Relational Databases',
-  'Clean UI/UX Design',
-  'System Design & Architecture'
-]
+import { SKILLS } from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -40,7 +30,7 @@ export function Skills() {
 
         {/* Skills Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-          {skills.map((skill, index) => (
+          {SKILLS.map((skill, index) => (
             <motion.div
               key={skill}
               initial={{ opacity: 0, y: 20 }}

@@ -4,6 +4,7 @@ import { useToast } from '@/hooks/use-toast'
 import {
   EMAIL,
   EMAIL_LINK,
+  FULL_NAME,
   GITHUB_URL,
   LINKEDIN_URL,
   TELEGRAM_URL,
@@ -213,7 +214,7 @@ export function Contact() {
           className="mt-24 lg:mt-32 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} Khant Yar Zar Htet. All rights reserved.
+            © {new Date().getFullYear()} {FULL_NAME}. All rights reserved.
           </p>
           <p className="text-xs text-gray-400">
             Myanmar

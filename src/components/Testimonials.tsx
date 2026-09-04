@@ -1,22 +1,5 @@
 import { motion } from 'framer-motion'
-
-const testimonials = [
-  {
-    quote: 'Khant is a dedicated developer who delivers clean, reliable code. His ability to learn fast and ship production-ready features is impressive.',
-    name: 'Team Lead',
-    role: 'Current Workplace',
-  },
-  {
-    quote: 'A self-driven engineer with a strong foundation in both frontend and backend. He consistently focuses on solving real problems.',
-    name: 'Mentor',
-    role: 'MST College',
-  },
-  {
-    quote: 'Great collaborator with a keen eye for clean architecture and thoughtful UX. A valuable asset to any development team.',
-    name: 'Colleague',
-    role: 'Fairway Technology',
-  },
-]
+import { TESTIMONIALS } from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -44,7 +27,7 @@ export function Testimonials() {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-          {testimonials.map((t, index) => (
+          {TESTIMONIALS.map((t, index) => (
             <motion.figure
               key={t.name}
               {...fadeInUp}

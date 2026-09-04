@@ -7,46 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-
-type Certification = {
-  title: string
-  issuer: string
-  year: string
-  description: string
-}
-
-const certifications: Certification[] = [
-  {
-    title: 'Professional Web Developer',
-    issuer: 'Fairway Technology',
-    year: '2024',
-    description: 'Completed professional web development training at Fairway Technology, gaining hands-on experience in building production-ready web applications with modern technologies. This certification covers frontend and backend development, including HTML/CSS, JavaScript, PHP, and database integration — laying the foundation for my career in professional web development.',
-  },
-  {
-    title: 'Fundamental Information Technology Engineer (FE)',
-    issuer: 'Japan ITPEC Program',
-    year: '2025',
-    description: 'Passed the FE examination in April 2025 — a prestigious Japanese ITPEC certification validating fundamental knowledge of computer science, algorithms, data structures, system design, and software engineering. This international certification demonstrates a strong engineering foundation recognized across Japan and Asia.',
-  },
-  {
-    title: 'IP Certificate',
-    issuer: 'MST College',
-    year: '2024',
-    description: 'Certified in the Information Technology Professional (IP) program at MST College, covering foundational IT concepts, computer architecture, networking fundamentals, and professional engineering practices. The IP program is the first level of Japan\'s ITPEC certification pathway.',
-  },
-  {
-    title: 'Java SE',
-    issuer: 'MST College',
-    year: '2024',
-    description: 'Certified in Java Standard Edition, demonstrating proficiency in core Java programming, object-oriented concepts, data structures, collections, exception handling, and desktop application development with JavaFX. This certification reflects strong foundation in one of the world\'s most widely-used programming languages.',
-  },
-  {
-    title: 'Internship Certificate',
-    issuer: 'Fairway Technology',
-    year: '2024',
-    description: 'Completed a professional internship at Fairway Technology, contributing to real-world development projects and gaining valuable industry experience. Worked with professional teams, followed software development workflows, version control practices, and shipped meaningful features to production.',
-  },
-]
+import { CERTIFICATIONS, type Certification } from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -79,7 +40,7 @@ export function Certifications() {
 
         {/* Certification Cards - 2 columns, full width */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-          {certifications.map((cert, index) => (
+          {CERTIFICATIONS.map((cert, index) => (
             <motion.button
               key={cert.title}
               onClick={() => setSelectedCert(cert)}

@@ -9,85 +9,11 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import {
-  WORK_IMAGE_URL,
-  MOBILE_APP_IMAGE_URL,
-  INDEPENDENT_IMAGE_URL,
-  EMS_IMAGE_URL,
-  POS_IMAGE_URL,
-} from '@/lib/constants'
-
-type Project = {
-  title: string
-  company: string
-  location: string
-  period: string
-  description: string
-  details: string
-  skills: string[]
-  category: 'Web' | 'Mobile' | 'Desktop'
-  image: string
-}
-
-const projects: Project[] = [
-  {
-    title: 'PHP Laravel Developer',
-    company: 'Current Professional Role',
-    location: 'Yangon, Myanmar',
-    period: '2026 — Present',
-    description: 'Developing and maintaining a scalable E-Learning Platform. Previously built dynamic web applications including a Music Web App and a Voting Web App. Focused on robust backend architecture, database optimization, and writing clean, maintainable code.',
-    details: 'Working full-time on a production E-Learning Platform, handling course management, user authentication, payment integration, and content delivery. Built a Music Web App with streaming features and a Voting Web App with real-time results. Deeply focused on writing clean, testable code and optimizing MySQL queries for performance at scale.',
-    skills: ['Laravel', 'PHP', 'MySQL', 'Web Apps', 'Backend Architecture'],
-    category: 'Web',
-    image: WORK_IMAGE_URL,
-  },
-  {
-    title: 'Mobile App Developer',
-    company: 'Professional Role',
-    location: 'Yangon, Myanmar',
-    period: 'Late 2025 — 2026',
-    description: 'Worked in a fast-paced environment developing multiple cross-platform mobile applications over a 6-month period. Successfully shipped diverse apps including School Management, Trip App, Shop App, Property App, Learning App, and Car App. Integrated Firebase for real-time data sync and backend services.',
-    details: 'Shipped 6+ production mobile apps across different industries in just 6 months. Built a School Management App with attendance and grade tracking, a Trip App with booking flows, a Shop App with cart and checkout, a Property App with listings, a Learning App with course content, and a Car App with vehicle management. Used Firebase for real-time sync, push notifications, and cloud storage.',
-    skills: ['React Native', 'Firebase', 'Mobile Development', 'UI/UX', 'API Integration'],
-    category: 'Mobile',
-    image: MOBILE_APP_IMAGE_URL,
-  },
-  {
-    title: 'Independent Mobile Developer',
-    company: 'Freelance & Personal Projects',
-    location: 'Remote',
-    period: '2025',
-    description: 'Designed and developed a suite of mobile applications featuring an E-Commerce platform, a Voting app, a Music streaming app, and "Loving 360". Emphasized responsive UI design, smooth animations, and seamless user experiences on both iOS and Android.',
-    details: 'Independently designed and built 4+ mobile applications from concept to store-ready. Built an E-Commerce platform with product catalogs and payments, a Voting app with live tallying, a Music streaming app with playlists and playback, and "Loving 360" — a relationship-focused app. Emphasized smooth animations, responsive layouts, and delightful UX on both platforms.',
-    skills: ['React Native', 'JavaScript', 'Cross-Platform', 'Mobile UI Design'],
-    category: 'Mobile',
-    image: INDEPENDENT_IMAGE_URL,
-  },
-  {
-    title: 'Employee Management System',
-    company: 'OJT Project',
-    location: 'MST College Training',
-    period: '2025',
-    description: 'Built a comprehensive Employee Management System from scratch using Pure PHP. Designed the relational database architecture and developed clean, functional interfaces for employee tracking and HR administration.',
-    details: 'Designed and developed a full Employee Management System using pure PHP without frameworks — demonstrating deep understanding of core language features. Created relational database schemas for employees, departments, attendance, and leave management. Built clean, functional CRUD interfaces for HR administration.',
-    skills: ['Pure PHP', 'MySQL', 'HTML/CSS', 'System Design', 'Relational Databases'],
-    category: 'Web',
-    image: EMS_IMAGE_URL,
-  },
-  {
-    title: 'Point of Sale (POS) System',
-    company: 'MST College (Final Project)',
-    location: 'Yangon, Myanmar',
-    period: '2025',
-    description: 'Developed a robust desktop Point of Sale (POS) application using JavaFX as the capstone project. Implemented inventory management, secure transaction handling, and a user-friendly cashier interface utilizing Object-Oriented Programming principles.',
-    details: 'Built a complete desktop POS system with JavaFX as my capstone project. Implemented inventory management with stock tracking, secure transaction handling with receipt generation, and an intuitive cashier interface. Applied Object-Oriented Programming principles throughout — inheritance, encapsulation, and MVC architecture to keep the codebase maintainable and extensible.',
-    skills: ['Java', 'JavaFX', 'Desktop Application', 'OOP', 'Database Management'],
-    category: 'Desktop',
-    image: POS_IMAGE_URL,
-  },
-]
-
-const FILTERS = ['All', 'Web', 'Mobile', 'Desktop'] as const
-type Filter = (typeof FILTERS)[number]
+  PROJECTS,
+  PROJECT_FILTERS,
+  type Project,
+  type ProjectFilter,
+} from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -98,10 +24,10 @@ const fadeInUp = {
 
 export function Work() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-  const [filter, setFilter] = useState<Filter>('All')
+  const [filter, setFilter] = useState<ProjectFilter>('All')
 
   const filteredProjects =
-    filter === 'All' ? projects : projects.filter((p) => p.category === filter)
+    filter === 'All' ? PROJECTS : PROJECTS.filter((p) => p.category === filter)
 
   return (
     <section id="work" className="section-padding">
@@ -124,7 +50,7 @@ export function Work() {
 
         {/* Filter Tabs */}
         <motion.div {...fadeInUp} className="mb-10 lg:mb-14 flex flex-wrap gap-2">
-          {FILTERS.map((f) => (
+          {PROJECT_FILTERS.map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}

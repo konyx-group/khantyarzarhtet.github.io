@@ -1,31 +1,5 @@
 import { motion } from 'framer-motion'
-
-const talks = [
-  {
-    title: 'Building Scalable Web Applications with Laravel',
-    event: 'Team Knowledge Sharing',
-    year: '2026',
-    link: '#',
-  },
-  {
-    title: 'From JavaFX to Modern Web: My Development Journey',
-    event: 'MST College Tech Talk',
-    year: '2025',
-    link: '#',
-  },
-  {
-    title: 'Introduction to React Native for Cross-Platform Development',
-    event: 'Developer Meetup',
-    year: '2025',
-    link: '#',
-  },
-  {
-    title: 'Passing the ITPEC FE Exam: Tips & Study Strategies',
-    event: 'MST College Workshop',
-    year: '2025',
-    link: '#',
-  },
-]
+import { TALKS } from '@/lib/data'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -56,7 +30,7 @@ export function Speaking() {
 
         {/* Talks List */}
         <div className="space-y-0">
-          {talks.map((talk, index) => (
+          {TALKS.map((talk, index) => (
             <motion.a
               key={talk.title}
               href={talk.link}

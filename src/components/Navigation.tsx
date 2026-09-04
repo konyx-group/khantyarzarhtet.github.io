@@ -2,19 +2,9 @@ import { useState } from 'react'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useScrollVisibility } from '@/hooks/useScrollVisibility'
 import { cn } from '@/lib/utils'
-import { EMAIL_LINK, GITHUB_URL, LINKEDIN_URL } from '@/lib/constants'
+import { EMAIL_LINK, GITHUB_URL, LINKEDIN_URL, SECTIONS } from '@/lib/constants'
 
-const navItems = [
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'work', label: 'Work' },
-  // { id: 'github', label: 'GitHub' },
-  // { id: 'testimonials', label: 'Testimonials' },
-  { id: 'certifications', label: 'Certifications' },
-  { id: 'education', label: 'Education' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'speaking', label: 'Speaking' },
-]
+const navItems = SECTIONS
 
 const socialLinks = [
   { label: 'Mail', href: EMAIL_LINK },
