@@ -8,6 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
+import {
+  WORK_IMAGE_URL,
+  MOBILE_APP_IMAGE_URL,
+  INDEPENDENT_IMAGE_URL,
+  EMS_IMAGE_URL,
+  POS_IMAGE_URL,
+} from '@/lib/constants'
 
 type Project = {
   title: string
@@ -31,7 +38,7 @@ const projects: Project[] = [
     details: 'Working full-time on a production E-Learning Platform, handling course management, user authentication, payment integration, and content delivery. Built a Music Web App with streaming features and a Voting Web App with real-time results. Deeply focused on writing clean, testable code and optimizing MySQL queries for performance at scale.',
     skills: ['Laravel', 'PHP', 'MySQL', 'Web Apps', 'Backend Architecture'],
     category: 'Web',
-    image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: WORK_IMAGE_URL,
   },
   {
     title: 'Mobile App Developer',
@@ -42,7 +49,7 @@ const projects: Project[] = [
     details: 'Shipped 6+ production mobile apps across different industries in just 6 months. Built a School Management App with attendance and grade tracking, a Trip App with booking flows, a Shop App with cart and checkout, a Property App with listings, a Learning App with course content, and a Car App with vehicle management. Used Firebase for real-time sync, push notifications, and cloud storage.',
     skills: ['React Native', 'Firebase', 'Mobile Development', 'UI/UX', 'API Integration'],
     category: 'Mobile',
-    image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: MOBILE_APP_IMAGE_URL,
   },
   {
     title: 'Independent Mobile Developer',
@@ -53,7 +60,7 @@ const projects: Project[] = [
     details: 'Independently designed and built 4+ mobile applications from concept to store-ready. Built an E-Commerce platform with product catalogs and payments, a Voting app with live tallying, a Music streaming app with playlists and playback, and "Loving 360" — a relationship-focused app. Emphasized smooth animations, responsive layouts, and delightful UX on both platforms.',
     skills: ['React Native', 'JavaScript', 'Cross-Platform', 'Mobile UI Design'],
     category: 'Mobile',
-    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: INDEPENDENT_IMAGE_URL,
   },
   {
     title: 'Employee Management System',
@@ -64,7 +71,7 @@ const projects: Project[] = [
     details: 'Designed and developed a full Employee Management System using pure PHP without frameworks — demonstrating deep understanding of core language features. Created relational database schemas for employees, departments, attendance, and leave management. Built clean, functional CRUD interfaces for HR administration.',
     skills: ['Pure PHP', 'MySQL', 'HTML/CSS', 'System Design', 'Relational Databases'],
     category: 'Web',
-    image: 'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: EMS_IMAGE_URL,
   },
   {
     title: 'Point of Sale (POS) System',
@@ -75,7 +82,7 @@ const projects: Project[] = [
     details: 'Built a complete desktop POS system with JavaFX as my capstone project. Implemented inventory management with stock tracking, secure transaction handling with receipt generation, and an intuitive cashier interface. Applied Object-Oriented Programming principles throughout — inheritance, encapsulation, and MVC architecture to keep the codebase maintainable and extensible.',
     skills: ['Java', 'JavaFX', 'Desktop Application', 'OOP', 'Database Management'],
     category: 'Desktop',
-    image: 'https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: POS_IMAGE_URL,
   },
 ]
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { GITHUB_API_URL, GITHUB_URL } from '@/lib/constants'
 
 type Repo = {
   name: string
@@ -17,7 +18,7 @@ const FALLBACK_REPOS: Repo[] = [
     language: 'JavaScript',
     stargazers_count: 0,
     forks_count: 0,
-    html_url: 'https://github.com/khantyarzarhtet',
+    html_url: GITHUB_URL,
   },
 ]
 
@@ -35,7 +36,7 @@ export function GitHub() {
 
   useEffect(() => {
     const controller = new AbortController()
-    fetch('https://api.github.com/users/khantyarzarhtet/repos?sort=updated&per_page=6', {
+    fetch(GITHUB_API_URL, {
       signal: controller.signal,
     })
       .then((res) => {

@@ -1,4 +1,9 @@
 import { motion } from 'framer-motion'
+import {
+  UCSY_IMAGE_URL,
+  MST_IMAGE_URL,
+  OJT_IMAGE_URL,
+} from '@/lib/constants'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -33,7 +38,7 @@ export function Education() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={UCSY_IMAGE_URL}
                 alt="University of Computer Studies, Yangon"
                 loading="lazy"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
@@ -83,7 +88,7 @@ export function Education() {
               className="lg:order-1"
             >
               <img
-                src="https://images.pexels.com/photos/159866/books-education-school-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={MST_IMAGE_URL}
                 alt="Books and education"
                 loading="lazy"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
@@ -98,7 +103,7 @@ export function Education() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={OJT_IMAGE_URL}
                 alt="Laptop with code"
                 loading="lazy"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"

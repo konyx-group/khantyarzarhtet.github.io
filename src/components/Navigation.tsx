@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useScrollVisibility } from '@/hooks/useScrollVisibility'
 import { cn } from '@/lib/utils'
+import { EMAIL_LINK, GITHUB_URL, LINKEDIN_URL } from '@/lib/constants'
 
 const navItems = [
   { id: 'about', label: 'About' },
@@ -16,10 +17,9 @@ const navItems = [
 ]
 
 const socialLinks = [
-  // { label: 'Resume', href: '/resume.html' },
-  { label: 'Mail', href: 'mailto:kyzhtet@gmail.com' },
-  { label: 'GitHub', href: 'https://github.com/khantyarzarhtet' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/khantyarzarhtet' },
+  { label: 'Mail', href: EMAIL_LINK },
+  { label: 'GitHub', href: GITHUB_URL },
+  { label: 'LinkedIn', href: LINKEDIN_URL },
 ]
 
 export function Navigation() {

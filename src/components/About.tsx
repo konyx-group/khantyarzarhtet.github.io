@@ -1,4 +1,9 @@
 import { motion } from 'framer-motion'
+import {
+  ABOUT_DEV_IMAGE_URL,
+  ABOUT_CODE_IMAGE_URL,
+  ABOUT_TEAM_IMAGE_URL,
+} from '@/lib/constants'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -26,7 +31,7 @@ export function About() {
             className="order-2 lg:order-1"
           >
             <img
-              src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={ABOUT_DEV_IMAGE_URL}
               alt="Developer at a laptop in a modern workspace"
               loading="lazy"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
@@ -79,7 +84,7 @@ export function About() {
             transition={{ ...fadeInUp.transition, delay: 0.2 }}
           >
             <img
-              src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={ABOUT_CODE_IMAGE_URL}
               alt="Lines of code on a monitor"
               loading="lazy"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
@@ -94,7 +99,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
             <img
-              src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={ABOUT_TEAM_IMAGE_URL}
               alt="Team collaborating around a laptop"
               loading="lazy"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"

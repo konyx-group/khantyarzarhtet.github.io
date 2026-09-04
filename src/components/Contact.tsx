@@ -1,11 +1,18 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { useToast } from '@/hooks/use-toast'
+import {
+  EMAIL,
+  EMAIL_LINK,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  TELEGRAM_URL,
+} from '@/lib/constants'
 
 const contacts = [
-  { label: 'OPEN SOURCE', link: 'https://github.com/khantyarzarhtet' },
-  { label: 'PROFESSIONAL', link: 'https://linkedin.com/in/khantyarzarhtet' },
-  { label: 'TELEGRAM', link: 'https://t.me/KYZH8' },
+  { label: 'OPEN SOURCE', link: GITHUB_URL },
+  { label: 'PROFESSIONAL', link: LINKEDIN_URL },
+  { label: 'TELEGRAM', link: TELEGRAM_URL },
 ]
 
 const fadeInUp = {
@@ -23,10 +30,10 @@ export function Contact() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('kyzhtet@gmail.com')
+      await navigator.clipboard.writeText(EMAIL)
       toast({
         title: 'Email copied!',
-        description: 'kyzhtet@gmail.com has been copied to your clipboard.',
+        description: `${EMAIL} has been copied to your clipboard.`,
       })
     } catch {
       toast({
@@ -40,7 +47,7 @@ export function Contact() {
     e.preventDefault()
     const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
-    window.location.href = `mailto:kyzhtet@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `${EMAIL_LINK}?subject=${subject}&body=${body}`
     toast({
       title: 'Opening your email client…',
       description: 'Your message has been prepared in a draft email.',
@@ -155,10 +162,10 @@ export function Contact() {
               </p>
               <div className="flex items-center gap-4">
                 <a
-                  href="mailto:kyzhtet@gmail.com"
+                  href={EMAIL_LINK}
                   className="text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
                 >
-                  kyzhtet@gmail.com
+                  {EMAIL}
                 </a>
                 <button
                   onClick={copyEmail}
@@ -169,7 +176,7 @@ export function Contact() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <a
-                  href="https://github.com/khantyarzarhtet"
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base text-gray-300 hover:text-white transition-colors underline underline-offset-4"
@@ -177,7 +184,7 @@ export function Contact() {
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/khantyarzarhtet"
+                  href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base text-gray-300 hover:text-white transition-colors underline underline-offset-4"
@@ -185,7 +192,7 @@ export function Contact() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://t.me/KYZH8"
+                  href={TELEGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base text-gray-300 hover:text-white transition-colors underline underline-offset-4"
