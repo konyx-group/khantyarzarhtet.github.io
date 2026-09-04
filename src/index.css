@@ -33,6 +33,12 @@
     --ring: 0 0% 98%;
 
     --radius: 0.5rem;
+
+    /* Brand palette — colors တွေအားလုံး ဒီမှာစုထားတယ်။
+       ပြောင်းချင်ရင် ဒီ value တွေပဲ ပြောင်းရမယ်။
+       tailwind.config.ts မှာ `brand-*` class တွေနဲ့ ဆက်စပ်ထားတယ်။ */
+    --surface: #0d0d0d; /* ပုံမှန် background နဲ့ ခွဲပြီး section အမည်းပြားများ */
+    --panel: #111111;   /* dialog / menu surface */
   }
 
   * {

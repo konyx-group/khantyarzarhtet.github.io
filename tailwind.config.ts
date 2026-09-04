@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          DEFAULT: "var(--surface)",
+          surface: "var(--surface)",
+          panel: "var(--panel)",
+        },
       },
       fontFamily: {
         display: ['Bebas Neue', 'sans-serif'],

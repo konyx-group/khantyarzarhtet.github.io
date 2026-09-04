@@ -10,7 +10,7 @@ const fadeInUp = {
 
 export function Skills() {
   return (
-    <section id="skills" className="section-padding bg-[#0d0d0d]">
+    <section id="skills" className="section-padding bg-brand-surface">
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">

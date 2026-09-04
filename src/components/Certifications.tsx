@@ -73,7 +73,7 @@ export function Certifications() {
             if (!open) setSelectedCert(null)
           }}
         >
-          <DialogContent className="max-w-lg bg-[#111] border-gray-800 text-white">
+          <DialogContent className="max-w-lg bg-brand-panel border-gray-800 text-white">
             <DialogHeader>
               <DialogTitle className="text-lg md:text-xl font-light text-white pr-6">
                 {selectedCert?.title}

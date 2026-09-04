@@ -57,7 +57,7 @@ export function GitHub() {
   }, [])
 
   return (
-    <section id="github" className="section-padding bg-[#0d0d0d]">
+    <section id="github" className="section-padding bg-brand-surface">
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeInUp} className="mb-12 flex items-center gap-4">
           <span className="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">

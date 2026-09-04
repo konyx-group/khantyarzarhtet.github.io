@@ -42,7 +42,7 @@ export function Navigation() {
 
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
-            <div className="absolute left-0 mt-4 w-48 bg-[#111] border border-white/10 rounded-lg backdrop-blur-sm shadow-xl shadow-black/50 overflow-hidden">
+            <div className="absolute left-0 mt-4 w-48 bg-brand-panel border border-white/10 rounded-lg backdrop-blur-sm shadow-xl shadow-black/50 overflow-hidden">
               <div className="py-2">
                 {navItems.map((item) => (
                   <button

@@ -132,7 +132,7 @@ export function Work() {
             if (!open) setSelectedProject(null)
           }}
         >
-          <DialogContent className="max-w-2xl bg-[#111] border-gray-800 text-white">
+          <DialogContent className="max-w-2xl bg-brand-panel border-gray-800 text-white">
             <DialogHeader>
               <DialogTitle className="text-xl md:text-2xl font-light text-white pr-6">
                 {selectedProject?.title}
